@@ -1,0 +1,55 @@
+@import 'variables'
+@import 'mixins'
+@import 'null'
+
+::-webkit-scrollbar-button
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 5px
+  height: 0px
+
+::-webkit-scrollbar-track
+  background-color: transparent
+
+::-webkit-scrollbar-thumb
+  -webkit-border-radius: 0px
+  border-radius: 0px
+  background-color: $c-sec
+
+::-webkit-scrollbar-thumb:hover
+  background-color: $c-active
+
+::-webkit-resizer
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 5px
+  height: 0px
+
+::-webkit-scrollbar
+  width: 5px
+
+.container
+  max-width: $maxWidthContainer+px
+  margin: 0px auto
+  @media ( min-width: 1540+px )
+    max-width: 1440px
+  @media ( max-width: $md1+px )
+    max-width: 970px
+  @media ( max-width: $md2+px )
+    max-width: 750px
+  @media ( max-width: $md3+px )
+    max-width: none
+    padding: 0px 10px
+
+// New container v3.x (BETA)
+@supports (width: min(10px, 15px))
+  .container
+    // CLAMP:
+    // 1: max-width in mobile device
+    // 2: width in general devices
+    // 3: max-width in desktop device
+    max-width: clamp(750px, 90%, 1440px)
+    margin: 0 auto
+    @media ( max-width: $md3+px )
+      max-width: none
+      padding: 0px 10px
