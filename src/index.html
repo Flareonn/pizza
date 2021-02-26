@@ -2,8 +2,338 @@
 <html lang="ru">
   @@include('_head.html')
   <body>
-    @@include('_header.html')
-    <main class="main"></main>
-    @@include('_footer.html') @@include('_js.html')
+    <div class="body-container">
+      @@include('_header.html')
+      <nav class="menu">
+        <ul class="menu-list menu-categories">
+          <li class="menu-list__item menu-item">
+            <button class="menu-item__button button button_dark">Все</button>
+          </li>
+          <li class="menu-list__item menu-item">
+            <button class="menu-item__button button">Мясные</button>
+          </li>
+          <li class="menu-list__item menu-item">
+            <button class="menu-item__button button">Вегетарианская</button>
+          </li>
+          <li class="menu-list__item menu-item">
+            <button class="menu-item__button button">Гриль</button>
+          </li>
+          <li class="menu-list__item menu-item">
+            <button class="menu-item__button button">Острые</button>
+          </li>
+          <li class="menu-list__item menu-item">
+            <button class="menu-item__button button">Закрытые</button>
+          </li>
+        </ul>
+        <div class="menu-sort">
+          <span class="menu-sort__label">
+            <svg
+              width="10"
+              height="6"
+              viewBox="0 0 10 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 5C10 5.16927 9.93815 5.31576 9.81445 5.43945C9.69075 5.56315 9.54427 5.625 9.375 5.625H0.625C0.455729 5.625 0.309245 5.56315 0.185547 5.43945C0.061849 5.31576 0 5.16927 0 5C0 4.83073 0.061849 4.68424 0.185547 4.56055L4.56055 0.185547C4.68424 0.061849 4.83073 0 5 0C5.16927 0 5.31576 0.061849 5.43945 0.185547L9.81445 4.56055C9.93815 4.68424 10 4.83073 10 5Z"
+                fill="#2C2C2C"
+              />
+            </svg>
+            Сортировка по:
+          </span>
+          <span class="menu-sort-selected">популярности</span>
+          <ul class="menu-sort-list">
+            <li class="menu-sort-list__item selected">популярности</li>
+            <li class="menu-sort-list__item">цене</li>
+            <li class="menu-sort-list__item">алфавиту</li>
+          </ul>
+        </div>
+      </nav>
+      <main class="main">
+        <h2 class="main__title">Все пиццы</h2>
+        <div class="main-grid pizzas">
+          <div class="main-grid__item pizzas-card">
+            <!-- prettier-ignore -->
+            <img src="img/pizzas/1.png" alt="pizza image" class="pizzas-card__image"/>
+            <h3 class="pizzas-card__title">Чизбургер-пицца</h3>
+            <div class="pizzas-settings">
+              <div class="pizzas-settings__height">
+                <button class="pizzas-settings__button active">тонкое</button>
+                <button class="pizzas-settings__button">традиционное</button>
+              </div>
+              <div class="pizzas-settings__width">
+                <button class="pizzas-settings__button active">26 см.</button>
+                <button class="pizzas-settings__button">30 см.</button>
+                <button class="pizzas-settings__button">40 см.</button>
+              </div>
+            </div>
+            <div class="pizzas-card-wrapper">
+              <strong class="pizzas-card__price">от 395 &#8381;</strong>
+              <button class="pizzas-card__button button button-active">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
+                    fill="#EB5A1E"
+                  />
+                </svg>
+                Добавить
+                <span class="circle">2</span>
+              </button>
+            </div>
+          </div>
+          <div class="main-grid__item pizzas-card">
+            <!-- prettier-ignore -->
+            <img src="img/pizzas/1.png" alt="pizza image" class="pizzas-card__image"/>
+            <h3 class="pizzas-card__title">Чизбургер-пицца</h3>
+            <div class="pizzas-settings">
+              <div class="pizzas-settings__height">
+                <button class="pizzas-settings__button active">тонкое</button>
+                <button class="pizzas-settings__button">традиционное</button>
+              </div>
+              <div class="pizzas-settings__width">
+                <button class="pizzas-settings__button active">26 см.</button>
+                <button class="pizzas-settings__button" disabled>30 см.</button>
+                <button class="pizzas-settings__button">40 см.</button>
+              </div>
+            </div>
+            <div class="pizzas-card-wrapper">
+              <strong class="pizzas-card__price">от 395 &#8381;</strong>
+              <button class="pizzas-card__button button button-active">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
+                    fill="#EB5A1E"
+                  />
+                </svg>
+                Добавить
+              </button>
+            </div>
+          </div>
+          <div class="main-grid__item pizzas-card">
+            <!-- prettier-ignore -->
+            <img src="img/pizzas/1.png" alt="pizza image" class="pizzas-card__image"/>
+            <h3 class="pizzas-card__title">Чизбургер-пицца</h3>
+            <div class="pizzas-settings">
+              <div class="pizzas-settings__height">
+                <button class="pizzas-settings__button active">тонкое</button>
+                <button class="pizzas-settings__button">традиционное</button>
+              </div>
+              <div class="pizzas-settings__width">
+                <button class="pizzas-settings__button active">26 см.</button>
+                <button class="pizzas-settings__button">30 см.</button>
+                <button class="pizzas-settings__button">40 см.</button>
+              </div>
+            </div>
+            <div class="pizzas-card-wrapper">
+              <strong class="pizzas-card__price">от 395 &#8381;</strong>
+              <button class="pizzas-card__button button button-active">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
+                    fill="#EB5A1E"
+                  />
+                </svg>
+                Добавить
+                <span class="circle">2</span>
+              </button>
+            </div>
+          </div>
+          <div class="main-grid__item pizzas-card">
+            <!-- prettier-ignore -->
+            <img src="img/pizzas/1.png" alt="pizza image" class="pizzas-card__image"/>
+            <h3 class="pizzas-card__title">Чизбургер-пицца</h3>
+            <div class="pizzas-settings">
+              <div class="pizzas-settings__height">
+                <button class="pizzas-settings__button active">тонкое</button>
+                <button class="pizzas-settings__button">традиционное</button>
+              </div>
+              <div class="pizzas-settings__width">
+                <button class="pizzas-settings__button active">26 см.</button>
+                <button class="pizzas-settings__button">30 см.</button>
+                <button class="pizzas-settings__button">40 см.</button>
+              </div>
+            </div>
+            <div class="pizzas-card-wrapper">
+              <strong class="pizzas-card__price">от 395 &#8381;</strong>
+              <button class="pizzas-card__button button button-active">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
+                    fill="#EB5A1E"
+                  />
+                </svg>
+                Добавить
+                <span class="circle">2</span>
+              </button>
+            </div>
+          </div>
+          <div class="main-grid__item pizzas-card">
+            <!-- prettier-ignore -->
+            <img src="img/pizzas/1.png" alt="pizza image" class="pizzas-card__image"/>
+            <h3 class="pizzas-card__title">Чизбургер-пицца</h3>
+            <div class="pizzas-settings">
+              <div class="pizzas-settings__height">
+                <button class="pizzas-settings__button active">тонкое</button>
+                <button class="pizzas-settings__button">традиционное</button>
+              </div>
+              <div class="pizzas-settings__width">
+                <button class="pizzas-settings__button active">26 см.</button>
+                <button class="pizzas-settings__button">30 см.</button>
+                <button class="pizzas-settings__button">40 см.</button>
+              </div>
+            </div>
+            <div class="pizzas-card-wrapper">
+              <strong class="pizzas-card__price">от 395 &#8381;</strong>
+              <button class="pizzas-card__button button button-active">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
+                    fill="#EB5A1E"
+                  />
+                </svg>
+                Добавить
+                <span class="circle">2</span>
+              </button>
+            </div>
+          </div>
+          <div class="main-grid__item pizzas-card">
+            <!-- prettier-ignore -->
+            <img src="img/pizzas/1.png" alt="pizza image" class="pizzas-card__image"/>
+            <h3 class="pizzas-card__title">Чизбургер-пицца</h3>
+            <div class="pizzas-settings">
+              <div class="pizzas-settings__height">
+                <button class="pizzas-settings__button active">тонкое</button>
+                <button class="pizzas-settings__button">традиционное</button>
+              </div>
+              <div class="pizzas-settings__width">
+                <button class="pizzas-settings__button active">26 см.</button>
+                <button class="pizzas-settings__button">30 см.</button>
+                <button class="pizzas-settings__button">40 см.</button>
+              </div>
+            </div>
+            <div class="pizzas-card-wrapper">
+              <strong class="pizzas-card__price">от 395 &#8381;</strong>
+              <button class="pizzas-card__button button button-active">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
+                    fill="#EB5A1E"
+                  />
+                </svg>
+                Добавить
+                <span class="circle">2</span>
+              </button>
+            </div>
+          </div>
+          <div class="main-grid__item pizzas-card">
+            <!-- prettier-ignore -->
+            <img src="img/pizzas/1.png" alt="pizza image" class="pizzas-card__image"/>
+            <h3 class="pizzas-card__title">Чизбургер-пицца</h3>
+            <div class="pizzas-settings">
+              <div class="pizzas-settings__height">
+                <button class="pizzas-settings__button active">тонкое</button>
+                <button class="pizzas-settings__button">традиционное</button>
+              </div>
+              <div class="pizzas-settings__width">
+                <button class="pizzas-settings__button active">26 см.</button>
+                <button class="pizzas-settings__button">30 см.</button>
+                <button class="pizzas-settings__button">40 см.</button>
+              </div>
+            </div>
+            <div class="pizzas-card-wrapper">
+              <strong class="pizzas-card__price">от 395 &#8381;</strong>
+              <button class="pizzas-card__button button button-active">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
+                    fill="#EB5A1E"
+                  />
+                </svg>
+                Добавить
+                <span class="circle">2</span>
+              </button>
+            </div>
+          </div>
+          <div class="main-grid__item pizzas-card">
+            <!-- prettier-ignore -->
+            <img src="img/pizzas/1.png" alt="pizza image" class="pizzas-card__image"/>
+            <h3 class="pizzas-card__title">Чизбургер-пицца</h3>
+            <div class="pizzas-settings">
+              <div class="pizzas-settings__height">
+                <button class="pizzas-settings__button active">тонкое</button>
+                <button class="pizzas-settings__button">традиционное</button>
+              </div>
+              <div class="pizzas-settings__width">
+                <button class="pizzas-settings__button active">26 см.</button>
+                <button class="pizzas-settings__button">30 см.</button>
+                <button class="pizzas-settings__button">40 см.</button>
+              </div>
+            </div>
+            <div class="pizzas-card-wrapper">
+              <strong class="pizzas-card__price">от 395 &#8381;</strong>
+              <button class="pizzas-card__button button button-active">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8 4.8H7.2V1.2C7.2 0.5373 6.6627 0 6 0C5.3373 0 4.8 0.5373 4.8 1.2V4.8H1.2C0.5373 4.8 0 5.3373 0 6C0 6.6627 0.5373 7.2 1.2 7.2H4.8V10.8C4.8 11.4627 5.3373 12 6 12C6.6627 12 7.2 11.4627 7.2 10.8V7.2H10.8C11.4627 7.2 12 6.6627 12 6C12 5.3373 11.4627 4.8 10.8 4.8Z"
+                    fill="#EB5A1E"
+                  />
+                </svg>
+                Добавить
+                <span class="circle">2</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      @@include('_js.html')
+    </div>
   </body>
 </html>

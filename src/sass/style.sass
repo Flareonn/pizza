@@ -1,6 +1,7 @@
 @import 'variables'
 @import 'mixins'
 @import 'null'
+@import 'interface'
 
 ::-webkit-scrollbar-button
   background-image: url('')
@@ -53,3 +54,24 @@
     @media ( max-width: $md3+px )
       max-width: none
       padding: 0px 10px
+
+body
+  background-color: #FFDF8C
+
+.body-container
+  margin: $padding-body-container
+  padding: $padding-body-container
+  padding-bottom: 96px
+  background-color: #fff
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03)
+  border-radius: 10px
+  @media ( max-width: $md4+px )
+    margin: 0
+    padding: 20px
+    border-radius: 0
+    box-shadow: none
+
+@import 'header'
+@import 'menu'
+@import 'main'
+@import 'cart'

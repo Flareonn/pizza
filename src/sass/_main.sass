@@ -1,0 +1,56 @@
+.main
+  padding-top: 32px
+  &__title
+    font-weight: bold
+    font-size: 32px
+    line-height: 39px
+  &-grid
+    margin-top: 35px
+    display: grid
+    flex-wrap: wrap
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 35px
+    grid-row-gap: 65px
+    justify-items: center
+    @media ( max-width: 1300px )
+      grid-template-columns: repeat(auto-fill, minmax(213px, 1fr))
+    &__item
+      width: 100%
+
+.pizzas-card
+  &__title
+    font-weight: 800
+    font-size: 20px
+    line-height: 24px
+    color: #000000
+    margin-bottom: 22px
+    text-align: center
+  &-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__price
+    font-weight: bold
+    font-size: 22px
+    line-height: 27px
+  >picture
+    display: flex
+    justify-content: center
+
+.pizzas-settings
+  background-color: #F3F3F3
+  border-radius: 10px
+  padding: 0px 5.73px
+  padding-top: 7px
+  margin-bottom: 17px
+  &__height, &__width
+    display: flex
+    justify-content: space-between
+    @media ( max-width: $md4+px )
+      overflow-x: auto
+  &__button
+    width: 100%
+    margin-right: 5.73px
+    margin-bottom: 7px
+    &:last-child
+      margin-right: 0
