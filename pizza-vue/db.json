@@ -1,0 +1,202 @@
+{
+  "pizzas": [
+    {
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/65f40f94-8181-4042-ae2c-10cd31c0a178.jpg",
+      "name": "Ветчина и сыр",
+      "price": 295,
+      "count": 0,
+      "types": {
+        "тонкое": true,
+        "традиционное": true
+      },
+      "sizes": {
+        "26": false,
+        "30": true,
+        "40": true
+      },
+      "categories": [
+        "Все",
+        "Мясные",
+        "Острые"
+      ],
+      "popularity": 21,
+      "id": 1
+    },
+    {
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/ff4b4951-6257-49fe-9c72-f0e272d8a503.jpg",
+      "name": "Кисло-сладкий цыпленок",
+      "price": 295,
+      "count": 0,
+      "types": {
+        "тонкое": true,
+        "традиционное": true
+      },
+      "sizes": {
+        "26": true,
+        "30": true,
+        "40": false
+      },
+      "categories": [
+        "Все",
+        "Мясные",
+        "Острые"
+      ],
+      "popularity": 21,
+      "id": 2
+    },
+    {
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/5dffe4c7d3bc49668f50c1d08d920992_292x292.jpeg",
+      "name": "Пепперони фреш",
+      "price": 245,
+      "count": 0,
+      "types": {
+        "тонкое": true,
+        "традиционное": true
+      },
+      "sizes": {
+        "26": true,
+        "30": true,
+        "40": true
+      },
+      "categories": [
+        "Все",
+        "Мясные"
+      ],
+      "popularity": 24,
+      "id": 3
+    },
+    {
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/26fa2948b6c74113afb9d09a3262fc26_292x292.jpeg",
+      "name": "Ветчина и грибы",
+      "price": 356,
+      "count": 0,
+      "types": {
+        "тонкое": false,
+        "традиционное": true
+      },
+      "sizes": {
+        "26": false,
+        "30": true,
+        "40": true
+      },
+      "categories": [
+        "Все",
+        "Мясные"
+      ],
+      "popularity": 5,
+      "id": 4
+    },
+    {
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/3327d3dd-1feb-443f-97b6-731fa8e64fac.jpg",
+      "name": "Пицца-пирог 🌱",
+      "price": 345,
+      "count": 0,
+      "types": {
+        "тонкое": true,
+        "традиционное": true
+      },
+      "sizes": {
+        "26": true,
+        "30": true,
+        "40": false
+      },
+      "categories": [
+        "Все",
+        "Вегетарианские",
+        "Закрытые"
+      ],
+      "popularity": 5,
+      "id": 5
+    },
+    {
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/de3aa884d63f43ac86fde8aa60d0b762_292x292.jpeg",
+      "name": "Запеченное яблоко 🌱",
+      "price": 495,
+      "count": 0,
+      "types": {
+        "тонкое": false,
+        "традиционное": true
+      },
+      "sizes": {
+        "26": true,
+        "30": true,
+        "40": false
+      },
+      "categories": [
+        "Все",
+        "Вегетарианские",
+        "Закрытые"
+      ],
+      "popularity": 1,
+      "id": 6
+    },
+    {
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/14414e03-0322-4751-a431-820c8ce84e58.jpg",
+      "name": "Цыпленок барбекю",
+      "price": 445,
+      "count": 0,
+      "types": {
+        "тонкое": false,
+        "традиционное": true
+      },
+      "sizes": {
+        "26": true,
+        "30": false,
+        "40": true
+      },
+      "categories": [
+        "Все",
+        "Мясные",
+        "Гриль",
+        "Острые"
+      ],
+      "popularity": 55,
+      "id": 7
+    },
+    {
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/a53d732ad6e048ab87bbabf3ddc97d15_292x292.jpeg",
+      "name": "Четыре сыра 🌱",
+      "price": 445,
+      "count": 0,
+      "types": {
+        "тонкое": true,
+        "традиционное": true
+      },
+      "sizes": {
+        "26": true,
+        "30": true,
+        "40": false
+      },
+      "categories": [
+        "Все",
+        "Вегетарианские",
+        "Закрытые"
+      ],
+      "popularity": 16,
+      "id": 8
+    },
+    {
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/dc5dc4e9-932a-4abf-9472-dfb6326ea9ee.jpg",
+      "name": "Мексиканская 🌶️🌶️",
+      "price": 665,
+      "count": 0,
+      "types": {
+        "тонкое": true,
+        "традиционное": true
+      },
+      "sizes": {
+        "26": false,
+        "30": true,
+        "40": true
+      },
+      "categories": [
+        "Все",
+        "Мясные",
+        "Гриль",
+        "Острые"
+      ],
+      "popularity": 62,
+      "id": 9
+    }
+  ]
+}

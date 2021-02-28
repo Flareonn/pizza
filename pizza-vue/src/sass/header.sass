@@ -1,0 +1,59 @@
+$pos-line: 35px
+
+.header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: relative
+  @media ( max-width: $md4+px )
+    flex-direction: column
+  &-logo
+    display: flex
+    @media ( max-width: $md4+px )
+      flex-direction: column
+      align-items: center
+    &__wrapper
+      margin-left: 17px
+      @media ( max-width: $md4+px )
+        margin: 10px 0
+        text-align: center
+      h1
+        font-size: 24px
+        font-weight: 800
+        color: #181818
+        text-transform: uppercase
+      h2
+        font-size: 16px
+        line-height: 19px
+        color: #7B7B7B
+        text-transform: lowercase
+  &-cart
+    &__button
+      background-color: $c-active!important
+      color: #fff!important
+      max-height: 50px
+      span
+        display: flex
+        align-items: center
+        &:first-child
+          padding-right: 13px
+          border-right: 1px solid rgba(255,255,255,.25)
+        &:last-child
+          padding-left: 13px
+          svg
+            margin-right: 8.67px
+  &::after
+    display: block
+    height: 1px
+    width: calc(100% + #{$padding-body-container} * 2)
+    background-color: #F7F7F7
+    content: ''
+    position: absolute
+    bottom: -$pos-line
+    left: -$padding-body-container
+    @media (max-width: $md4+px)
+      width: 100%
+      left: 0
+
+header.header + *
+  margin-top: $pos-line

@@ -1,0 +1,48 @@
+@import 'variables'
+@import 'null'
+
+::-webkit-scrollbar-button
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 5px
+  height: 0px
+
+::-webkit-scrollbar-track
+  background-color: transparent
+
+::-webkit-scrollbar-thumb
+  -webkit-border-radius: 0px
+  border-radius: 0px
+  background-color: $c-sec
+
+::-webkit-scrollbar-thumb:hover
+  background-color: $c-active
+
+::-webkit-resizer
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 5px
+  height: 0px
+
+::-webkit-scrollbar
+  width: 5px
+
+body
+  background-color: #FFDF8C
+
+.body-container
+  margin: $padding-body-container
+  padding: $padding-body-container
+  padding-bottom: 96px
+  background-color: #fff
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03)
+  border-radius: 10px
+  @media ( max-width: $md4+px )
+    margin: 0
+    padding: 20px
+    border-radius: 0
+    box-shadow: none
+
+@import 'header'
+@import 'main'
+@import 'interface'
