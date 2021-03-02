@@ -19,7 +19,7 @@
         "Мясные",
         "Острые"
       ],
-      "popularity": 21,
+      "popularity": 2,
       "id": 1
     },
     {
@@ -197,6 +197,28 @@
       ],
       "popularity": 62,
       "id": 9
+    },
+    {
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/f5efd84790134654b9eb84c89f2c9ca8_292x292.jpeg",
+      "name": "Нежный лосось",
+      "price": 495,
+      "count": 0,
+      "types": {
+        "тонкое": true,
+        "традиционное": true
+      },
+      "sizes": {
+        "26": false,
+        "30": true,
+        "40": true
+      },
+      "categories": [
+        "Все",
+        "Мясные",
+        "Острые"
+      ],
+      "popularity": 1,
+      "id": 10
     }
   ]
 }
