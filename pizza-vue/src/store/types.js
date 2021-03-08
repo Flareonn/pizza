@@ -1,13 +1,16 @@
 /* GENERAL */
 // LOAD FROM DB
-export const LOAD_PIZZAS = 'loadPizzas'; // With sort & filters
+export const LOAD_PIZZAS = 'loadPizzas';
 
 // STORE PIZZAS
 export const GET_PIZZAS = 'getPizzas';
-export const GET_FILTERED_PIZZAS = 'filterPizzas';
 export const SET_PIZZAS = 'setPizzas';
 export const EDIT_PIZZAS = 'editPizzas';
 export const DEL_PIZZAS = 'delPizzas';
+
+// FILTERS / SORTING
+export const SET_FILTERS_PIZZAS = 'setFilterPizzas';
+export const SET_SORTING_PIZZAS = 'setSortPizzas'
 
 // ADMIN DB
 export const SET_DB_PIZZA = 'setDbPizza';

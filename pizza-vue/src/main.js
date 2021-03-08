@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import VueResource from 'vue-resource'
 import Vuelidate from 'vuelidate'
 import fb from 'firebase/app'
-import "firebase/auth"
 
 import App from './App.vue'
 import router from './router'
@@ -11,9 +9,7 @@ import store from './store'
 
 
 Vue.use(VueRouter);
-Vue.use(VueResource);
 Vue.use(Vuelidate);
-// Vue.http.options.root = "https://my-json-server.typicode.com/Flareonn/pizza"
 
 const configOptions = {
   apiKey: "AIzaSyDvYmO6hYPCxedSI4n_R6UN1xeADRsRIoQ",
@@ -32,7 +28,8 @@ new Vue({
   store,
   created () {
     fb.initializeApp(configOptions);
-    this.$store.dispatch('autoLogin');
-    this.$store.dispatch('loadPizzas', this.$resource('pizzas'))
+    this.$store.dispatch('autoLogin').then(() => {
+      this.$store.dispatch('loadPizzas')
+    })
   }
 })

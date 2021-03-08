@@ -1,6 +1,6 @@
 <template>
   <div class="sign">
-    <form class="sign-form" @submit.prevent="loginUser">
+    <form class="sign-form" @submit.prevent="loginUser" v-if="getUser === null">
       <span class="sign-form__error">{{errorValidForm || getError}}</span>
       <h2 class="sign-form__title">
         <span v-if="!getLoading">Авторизация</span>
@@ -45,6 +45,23 @@
           </router-link>
         </div>
     </form>
+    <transition name="fade" v-else>
+      <div class="thanks">
+        <h2 class="thanks__title">
+          Вы здесь уже <b>зарегестрированы</b>! <br> <br>
+          Выбрать <router-link to="/"><b>пиццы</b></router-link> под вечер <br>
+          Или же... посидеть в своём <router-link to="/admin"><b>кабинете</b></router-link>?
+        </h2>
+        <div class="thanks-group">
+          <router-link class="button button_dark" to="/">
+            Купить пиццу
+          </router-link>
+          <router-link class="button button-active" to="/admin">
+            Войти в кабинет
+          </router-link>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -80,6 +97,9 @@ export default {
     getLoading () {
       return this.$store.getters.getLoading;
     },
+    getUser () {
+      return this.$store.getters.getUser;
+    }
   },
   validations: {
     email: {

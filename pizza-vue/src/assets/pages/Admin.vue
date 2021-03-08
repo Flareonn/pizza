@@ -48,8 +48,8 @@
       </div>
     </form>
     <div class="builder-actions">
-      <button class="button-submit button button-active" @click="createPizza">Отправить в базу данных</button>
-      <button class="seePizzas button button_outline" @click="isOpenList = !isOpenList">Получить пиццы из БД</button>
+      <button class="builder-actions__set button-submit button" :class="[getLoading ? 'button_outline' : 'button-active']" @click="createPizza">Отправить в базу данных</button>
+      <button class="builder-actions__get button button_dark" @click="isOpenList = !isOpenList">Получить пиццы из БД</button>
     </div>
     <div class="pizzas-list" v-show="isOpenList">
       <div class="pizzas-list-header">
@@ -113,8 +113,10 @@ export default {
         .from(document.querySelectorAll('.active'))
         .map(label => label.classList.remove('active'));
 
+      if(!this.constructorPizza.categories.includes('Все'))
+        this.constructorPizza.categories.push('Все');
+
       this.$store.dispatch('setDbPizza', {
-        http: this.$http,
         constructorPizza: this.constructorPizza
       })
       .then(() => {
@@ -141,6 +143,9 @@ export default {
   computed: {
     getAllPizzas() {
       return this.$store.getters.getPizzas;
+    },
+    getLoading() {
+      return this.$store.getters.getLoading;
     }
   },
 }

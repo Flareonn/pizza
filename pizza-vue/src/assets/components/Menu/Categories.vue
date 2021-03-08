@@ -15,7 +15,8 @@ export default {
   name: 'Categories',
   methods: {
     changeCat(category) {
-      this.$store.commit('changeCategory', category)
+      this.$store.commit('changeCategory', category);
+      this.$store.dispatch('setFilterPizzas');
     }
   },
   computed: {

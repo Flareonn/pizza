@@ -6,7 +6,7 @@
       <h2 class="main__title" v-else>Готовим пиццу...</h2>
       <div class="main-grid pizzas">
         <card-pizza 
-          v-for="pizza in getAllPizzas" 
+          v-for="pizza in getPizzas" 
           :key="pizza.id"
           :pizza="pizza"
         ></card-pizza>
@@ -22,8 +22,8 @@ export default {
   name: 'HomePage',
   components: { CardPizza, MenuSite },
   computed: {
-    getAllPizzas() {
-      return this.$store.getters.filterPizzas
+    getPizzas() {
+      return this.$store.getters.getFilteredPizzas
     },
     selectedCategory() {
       return this.$store.getters.getCurrentCategory

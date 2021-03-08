@@ -56,15 +56,15 @@
     <transition name="fade" v-else>
       <div class="thanks">
         <h2 class="thanks__title">
-          Регистрация прошла <b>успешно</b>! <br> <br>
-          Выбрать <b>пиццы</b> под вечер <br>
-          Или же... посидеть в своём <b>кабинетике</b>?
+          Вы здесь уже <b>зарегестрированы</b>! <br> <br>
+          Выбрать <router-link to="/"><b>пиццы</b></router-link> под вечер <br>
+          Или же... посидеть в своём <router-link to="/admin"><b>кабинете</b></router-link>?
         </h2>
         <div class="thanks-group">
           <router-link class="button button_dark" to="/">
             Купить пиццу
           </router-link>
-          <router-link class="button button-active" to="/login">
+          <router-link class="button button-active" to="/admin">
             Войти в кабинет
           </router-link>
         </div>
@@ -96,7 +96,9 @@ export default {
         email: this.email,
         password: this.password
       }
-      this.$store.dispatch('registerUser', user)
+      this.$store.dispatch('registerUser', user).then(() => {
+        this.$router.push('/')
+      })
     }
   },
   computed: {

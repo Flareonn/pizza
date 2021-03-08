@@ -50,7 +50,7 @@ export default {
         item: sortBy,
         order: this.currentSort.order
       })
-      this.$store.dispatch('loadPizzas', this.$resource('pizzas'))
+      this.$store.dispatch('setSortPizzas')
     }    
   },
   computed: {
