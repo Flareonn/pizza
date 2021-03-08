@@ -1,6 +1,5 @@
 <template>
   <div>
-    <header-site></header-site>
     <div class="cart" v-if="Object.values(getSelectedPizzas).length">
       <div class="cart-header">
         <h2 class="cart-header__title">
@@ -127,12 +126,10 @@
 <script>
 import styles from '../../sass/cart.sass'
 
-import HeaderSite from '../components/Header'
 import CartItem from '../components/CartItem'
 export default {
   name: 'CartPage',
   components: {
-    HeaderSite,
     CartItem
   },
   methods: {

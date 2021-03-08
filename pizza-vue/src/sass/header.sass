@@ -1,4 +1,5 @@
 $pos-line: 35px
+$hdr-btn-pad: 13px
 
 .header
   display: flex
@@ -7,6 +8,48 @@ $pos-line: 35px
   position: relative
   @media ( max-width: $md4+px )
     flex-direction: column
+  &-actions-group
+    display: flex
+    height: 50px
+  &-auth
+    margin-right: $hdr-btn-pad
+    &-animate
+      display: flex
+      align-items: center
+    &-group
+      height: 100%
+      display: flex
+      align-items: center
+      &__wrapper
+        padding-left: 9px
+        height: inherit
+        display: inherit
+        align-items: inherit
+    &__link
+      color: #fff
+      height: inherit
+      display: inherit
+      align-items: inherit
+      &:first-child
+        padding-right: $hdr-btn-pad
+        position: relative
+        &::after
+          position: absolute
+          width: 1px
+          height: 19px
+          display: block
+          content: ''
+          background-color: rgba(#fff, .25)
+          top: 50%
+          right: 0
+          transform: translate(0, -50%)
+      &:last-child
+        padding: 0 $hdr-btn-pad
+    &.button
+      padding: 0
+      padding-left: 13px
+    &.closed
+      padding-right: 13px
   &-logo
     display: flex
     @media ( max-width: $md4+px )
@@ -36,10 +79,10 @@ $pos-line: 35px
         display: flex
         align-items: center
         &:first-child
-          padding-right: 13px
+          padding-right: $hdr-btn-pad
           border-right: 1px solid rgba(255,255,255,.25)
         &:last-child
-          padding-left: 13px
+          padding-left: $hdr-btn-pad
           svg
             margin-right: 8.67px
   &::after

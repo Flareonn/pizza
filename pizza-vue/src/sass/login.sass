@@ -1,0 +1,75 @@
+@import 'variables'
+.sign
+  padding-top: 110px
+  display: flex
+  justify-content: center
+  align-items: center
+.sign-form
+  display: flex
+  align-items: center
+  flex-direction: column
+  width: 400px
+  &__title
+    @extend .thanks__title
+  &__input
+    border-radius: 15px
+    padding: 15px
+    font-weight: bold
+    font-size: 16px
+    line-height: 19px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #2C2C2C
+    border: 1px solid #2c2c2c
+    width: 100%
+    margin-bottom: 15px
+    &.error
+      border-color: $c-active
+  &__error
+    color: $c-active
+    font-weight: bold
+    background-color: rgba($c-active, .1)
+  &__submit
+    &.button_outline
+      border-color: #cacaca
+      pointer-events: none
+      &:hover
+        background-color: #FFFFFF
+        color: #CACACA
+  &__label
+    width: 100%
+    margin-bottom: 15px
+    h4
+      font-weight: bold
+      font-size: 18px
+
+.sign-group
+  display: grid
+  margin-top: 25px
+  grid-template-columns: repeat(2, 1fr)
+  grid-column-gap: 20px
+  width: 100%
+  .button
+    width: inherit
+    border-radius: 15px
+
+.thanks
+  &-group
+    display: flex
+    justify-content: space-evenly
+    >.button
+      width: 200px
+    .button-active
+      background-color: $c-active
+      color: #fff
+  &__title
+    font-size: 3em
+    padding-bottom: 1.5em
+    text-align: center
+    b
+      color: $c-active
+.fade-enter-active, .fade-leave-active
+  transition: opacity 1s
+.fade-enter, .fade-leave-to
+  opacity: 0

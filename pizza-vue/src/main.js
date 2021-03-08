@@ -1,21 +1,38 @@
 import Vue from 'vue'
-import App from './App.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import Vuelidate from 'vuelidate'
+import fb from 'firebase/app'
+import "firebase/auth"
+
+import App from './App.vue'
 import router from './router'
 import store from './store'
 
+
 Vue.use(VueRouter);
-
 Vue.use(VueResource);
+Vue.use(Vuelidate);
+// Vue.http.options.root = "https://my-json-server.typicode.com/Flareonn/pizza"
 
-Vue.http.options.root = "http://localhost:3000/"
+const configOptions = {
+  apiKey: "AIzaSyDvYmO6hYPCxedSI4n_R6UN1xeADRsRIoQ",
+  authDomain: "pizzapet-9298b.firebaseapp.com",
+  databaseURL: "https://pizzapet-9298b-default-rtdb.firebaseio.com",
+  projectId: "pizzapet-9298b",
+  storageBucket: "pizzapet-9298b.appspot.com",
+  messagingSenderId: "1032971399735",
+  appId: "1:1032971399735:web:74fc43d2a75646cf4805b2"
+}
 
 new Vue({
   el: '#app',
   render: h => h(App),
   router,
-  store
+  store,
+  created () {
+    fb.initializeApp(configOptions);
+    this.$store.dispatch('autoLogin');
+    this.$store.dispatch('loadPizzas', this.$resource('pizzas'))
+  }
 })
-
-function testWebP(e){var A=new Image;A.onload=A.onerror=function(){e(2==A.height)},A.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA"}testWebP((function(e){1==e?document.querySelector("body").classList.add("webp"):document.querySelector("body").classList.add("no-webp")}));
